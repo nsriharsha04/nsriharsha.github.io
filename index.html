@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harsha | Portfolio</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg-dark: #0f172a;
+        --bg-light: #1e293b;
+        --accent: #14b8a6;
+        --white: #f1f5f9;
+        --gray: #94a3b8;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--bg-dark);
+        color: var(--white);
+        line-height: 1.6;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 2rem;
+        background: var(--bg-light);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      nav a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: var(--white);
+        font-weight: 300;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        display: grid;
+        place-items: center;
+        min-height: 75vh;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        max-width: 640px;
+        margin: 0 auto 2rem;
+        color: var(--gray);
+      }
+
+      .btn {
+        display: inline-block;
+        background: var(--accent);
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        color: var(--bg-dark);
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+      }
+      .btn:hover {
+        opacity: 0.85;
+      }
+
+      section {
+        padding: 4rem 2rem;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      section h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      section h3::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: var(--accent);
+        margin-top: 0.5rem;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        background: var(--bg-light);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 1rem;
+      }
+      .card-content h4 {
+        margin-bottom: 0.5rem;
+      }
+      .card-content p {
+        font-size: 0.875rem;
+        color: var(--gray);
+      }
+
+      .contact {
+        text-align: center;
+      }
+      .contact ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+      .contact a {
+        color: var(--white);
+        font-size: 1.25rem;
+        transition: color 0.3s ease;
+      }
+      .contact a:hover {
+        color: var(--accent);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem 0;
+        color: var(--gray);
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Harsha</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2>Hello, I'm Harsha</h2>
+        <p>
+          Full‑stack developer and cloud engineer passionate about building
+          secure, scalable solutions with Java, Python, and Generative AI.
+        </p>
+        <a class="btn" href="https://github.com/YOUR_USERNAME" target="_blank">Follow on GitHub</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h3>About Me</h3>
+      <p>
+        I have 7+ years of experience designing & developing enterprise systems
+        across finance, banking, and fintech verticals. I specialize in
+        Java/Spring, cloud‑native microservices, and data engineering on AWS and
+        GCP. Recently, I’m focused on architecting Generative AI agents for
+        regulated enterprises.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h3>Selected Projects</h3>
+      <div class="projects">
+        <!-- Project card 1 -->
+        <div class="card">
+          <img src="https://placehold.co/600x400" alt="Project screenshot" />
+          <div class="card-content">
+            <h4>ATAMO (GenAI on GCP)</h4>
+            <p>
+              Autonomous transaction monitor powered by Vertex AI, translating
+              user queries into actionable modules and surfacing real‑time data
+              from EQH.
+            </p>
+          </div>
+        </div>
+        <!-- Project card 2 -->
+        <div class="card">
+          <img src="https://placehold.co/600x400" alt="Project screenshot" />
+          <div class="card-content">
+            <h4>Financial Q&A Chatbot</h4>
+            <p>
+              LLM + RAG chatbot leveraging OpenAI, LangChain, and Pinecone for
+              serverless vector search and compliance‑grade traceability.
+            </p>
+          </div>
+        </div>
+        <!-- Project card 3 -->
+        <div class="card">
+          <img src="https://placehold.co/600x400" alt="Project screenshot" />
+          <div class="card-content">
+            <h4>Secure Networking Toolkit</h4>
+            <p>
+              CLI and dashboard helping blue‑team analysts automate Cisco Secure
+              networking tasks and visualize threat telemetry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>Contact</h3>
+      <p>Interested in working together? Reach out!</p>
+      <ul>
+        <li>
+          <a href="mailto:you@example.com" aria-label="Email">✉️</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" aria-label="LinkedIn">in</a>
+        </li>
+        <li>
+          <a href="https://medium.com/@YOUR_PROFILE" target="_blank" aria-label="Medium">M</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Harsha — Built with ♥ and GitHub Pages</p>
+    </footer>
+  </body>
+</html>
